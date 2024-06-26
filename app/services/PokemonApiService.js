@@ -16,6 +16,7 @@ class PokemonApiService {
             console.log(response)
             let newPokemon = new Pokemon(response.data)
             console.log(newPokemon)
+            AppState.activePokemon = newPokemon
         } catch (error) {
             Pop.error(error)
         }

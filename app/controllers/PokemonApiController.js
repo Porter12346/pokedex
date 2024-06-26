@@ -7,6 +7,7 @@ import { setHTML } from "../utils/Writer.js"
 export class PokemonApiController {
     constructor() {
         AppState.on('pokemon', this.drawPokemon)
+        AppState.on('activePokemon', this.drawActivePokemon)
         this.getPokemon()
     }
 
@@ -34,10 +35,11 @@ export class PokemonApiController {
         }
 
     }
- 
-    
-    drawActivePokemon(){
+
+
+    drawActivePokemon() {
+        console.log('drawing active mon');
         let activePokemon = AppState.activePokemon
-        
+        setHTML('active-pokemon', activePokemon.activeHTMLTemplate)
     }
 }

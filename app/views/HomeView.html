@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-7 d-flex justify-content-between">
+            <h1>PokeDex</h1>
+            <button class="btn btn-primary rounded rounded-pill justify-self-end">Your Pokemon</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <div>
+                <h2>Pokemon name</h2>
+                <img src="https://images.unsplash.com/photo-1605979257913-1704eb7b6246?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="pokemon image" class="img-fluid">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <p>Height: 2'3"</p>
+                        <p>Weight: 86 lbs</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Types: water, flying</p>
+                        <button class="btn btn-outline-danger rounded">Catch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="pokemon-list" class="pokemon-list">
+                <h2>litterally the entire PokeDex</h2>
+                <button class="btn btn-info rounded mt-2 w-50">${pokemon.name}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,11 +6,12 @@ export class SandboxApiController {
         console.log('s api cont init');
     }
 
-    async savePokemon(){
+    async savePokemon() {
         try {
             await sandboxApiService.savePokemon()
         } catch (error) {
             Pop.error(error)
+            console.log('failed to save mon')
         }
     }
 }

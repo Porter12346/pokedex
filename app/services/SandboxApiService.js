@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { Pop } from "../utils/Pop.js";
 import { api, pokeApi } from "./AxiosService.js";
 
 class SandboxApiService {
@@ -8,10 +9,16 @@ class SandboxApiService {
     }
 
     async savePokemon() {
-        let activePokemon = AppState.activePokemon
+        try {
+                    let activePokemon = AppState.activePokemon
         console.log('saving mon');
         let response = await api.post(activePokemon)
         console.log(response);
+        } catch (error) {
+            Pop.error(error)
+            console.log('failed to save');
+        }
+
     }
 }
 

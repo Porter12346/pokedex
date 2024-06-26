@@ -10,10 +10,10 @@ class SandboxApiService {
 
     async savePokemon() {
         try {
-                    let activePokemon = AppState.activePokemon
-        console.log('saving mon');
-        let response = await api.post(activePokemon)
-        console.log(response);
+            let activePokemon = AppState.activePokemon
+            console.log('saving mon');
+            let response = await api.post('api/pokemon', activePokemon)
+            console.log(response);
         } catch (error) {
             Pop.error(error)
             console.log('failed to save');

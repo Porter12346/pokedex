@@ -11,8 +11,8 @@ export class Pokemon {
         });
     }
 
-    get activeHTMLTemplate(){
-        return(`<div>
+    get activeHTMLTemplate() {
+        return (`<div>
                 <h2>${this.name}</h2>
                 <img src="${this.img}"
                     alt="${this.name}" class="img-fluid">
@@ -23,7 +23,7 @@ export class Pokemon {
                     </div>
                     <div class="d-flex justify-content-between">
                         <p>Types: ${this.types}</p>
-                        <button class="btn btn-outline-danger rounded">Catch</button>
+                        <button class="btn btn-outline-danger rounded" onclick="app.SandboxApiController.savePokemon()">Catch</button>
                     </div>
                 </div>
             </div>`)

@@ -4,6 +4,15 @@ import { Pop } from "../utils/Pop.js";
 export class SandboxApiController {
     constructor() {
         console.log('s api cont init');
+        this.getOwnedPokemon()
+    }
+
+    async getOwnedPokemon() {
+        try {
+            await sandboxApiService.getOwnedPokemon()
+        } catch (error) {
+            Pop.error(error)
+        }
     }
 
     async savePokemon() {

@@ -8,6 +8,15 @@ class SandboxApiService {
         console.log('s api ser init');
     }
 
+    async getOwnedPokemon() {
+        try {
+            let response = await api.get('/api/pokemon')
+            console.log(response)
+        } catch (error) {
+            Pop.error(error)
+        }
+    }
+
     async savePokemon() {
         try {
             let activePokemon = AppState.activePokemon
